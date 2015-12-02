@@ -1,0 +1,38 @@
+<html>
+<head>
+</head>
+<body>
+
+
+
+  <div id="log"/>
+
+<script>
+
+function ajaxRequest(){
+  var xhr;
+  xhr = new XMLHttpRequest();
+  xhr.open("GET","",true);
+  xhr.onreadystatechange=function(){
+    if(xhr.readyState == 4 && xhr.status == 200){
+        //good response
+    }
+  }
+
+  xhr.onerror = function(){
+    //error state
+  }
+  xhr.send();
+
+}
+
+
+function saveToWebStorage( name, val){
+  localStorage[name]=val
+}
+
+</script>
+
+</body>
+
+</html>
